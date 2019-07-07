@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Indoctrination
 {
-    [Activity(Label = "MenuDetailActivity")]
+    [Activity(Label = "DetailMenu")]
     public class MenuDetailActivity : Activity
     {
         ListView mainList;

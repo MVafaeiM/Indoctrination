@@ -13,7 +13,7 @@ using Android.Media;
 
 namespace Indoctrination
 {
-    [Activity(Label = "DetailActivity")]
+    [Activity(Label = "Detail")]
     public class DetailActivity : Activity
     {
         private MediaPlayer _mediaPlayer;

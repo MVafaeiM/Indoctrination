@@ -15,18 +15,18 @@ namespace Indoctrination.Menu
 {
     public class MyMenuistAdapter : BaseAdapter<MenuModel>
     {
-        List<MenuModel> users;
+        List<MenuModel> menuAdapter;
 
-        public MyMenuistAdapter(List<MenuModel> users)
+        public MyMenuistAdapter(List<MenuModel> mnuAdapter)
         {
-            this.users = users;
+            this.menuAdapter = mnuAdapter;
         }
 
         public override MenuModel this[int position]
         {
             get
             {
-                return users[position];
+                return menuAdapter[position];
             }
         }
 
@@ -34,7 +34,7 @@ namespace Indoctrination.Menu
         {
             get
             {
-                return users.Count;
+                return menuAdapter.Count;
             }
         }
 
@@ -60,9 +60,9 @@ namespace Indoctrination.Menu
 
             var holder = (ViewHolder)view.Tag;
 
-            holder.Photo.SetImageDrawable(ImageManager.Get(parent.Context, users[position].ImageUrl));
-            holder.Name.Text = users[position].Name;
-            holder.Department.Text = users[position].Department;
+            holder.Photo.SetImageDrawable(ImageManager.Get(parent.Context, menuAdapter[position].ImageUrl));
+            holder.Name.Text = menuAdapter[position].Name;
+            holder.Department.Text = menuAdapter[position].Department;
 
 
             return view;
